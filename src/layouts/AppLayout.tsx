@@ -4,13 +4,13 @@ import { Outlet } from "react-router-dom";
 const AppLayout = () => {
   return (
     <React.Fragment>
-      <header>Header</header>
-      <nav>Nav</nav>
-      <main>
+      <header className="">Header</header>
+      <nav className="">Nav</nav>
+      <main className="">
         Main
         <Outlet />
       </main>
-      <footer>Footer</footer>
+      <footer className="">Footer</footer>
     </React.Fragment>
   );
 };

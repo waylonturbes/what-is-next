@@ -13,6 +13,20 @@ export default defineConfig({
     VitePWA(),
     Unocss({
       presets: [presetUno(), presetIcons()],
+      variants: [
+        (matcher) => {
+          const [, attribute = "", value = ""] =
+            matcher.match(/^\[([^\/]+)\/?(.*)\]:/) ?? [];
+          if (!attribute) {
+            return { matcher };
+          }
+          const attributeValue = value ? `="${value}"` : value;
+          return {
+            matcher: matcher.replace(/^\[.+\]:(.*)$/, "$1"),
+            selector: (s) => `[${attribute}${attributeValue}]${s}`,
+          };
+        },
+      ],
     }),
   ],
 });

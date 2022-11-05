@@ -1,0 +1,16 @@
+@import "./normalize.css";
+
+#root {
+  background-color: #e4e4e7; /* zinc.200 */
+  color: #18181b; /* zinc.900 */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+  #root {
+    background-color: #27272a; /* zinc.800 */
+    color: #fafafa; /* zinc.50 */
+  }
+}
