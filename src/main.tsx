@@ -7,6 +7,9 @@ import store from "./redux/store";
 import router from "./router";
 import "./index.css";
 import "uno.css";
+import bootstrapTheme from "./utils/bootstrapTheme";
+
+bootstrapTheme();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
