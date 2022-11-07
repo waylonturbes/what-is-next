@@ -1,14 +1,19 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
+import NavBar from "../components/NavBar";
+import HeaderBar from "../components/HeaderBar";
+
+/** Layout for the entire application. Provides a way for users to navigate */
 function AppLayout() {
   return (
     <React.Fragment>
-      <header className="w-full h-16 bg-yellow-5">Header</header>
-      <nav className="w-20 bg-blue-5 h-full">Nav</nav>
-      <main className="bg-red-5 h-full flex-1">
-        Main
-        <Outlet />
+      <HeaderBar />
+      <NavBar />
+      <main className="flex-1 min-h-[calc(100vh-4rem)] sm:left-16">
+        <div className="flex-1 h-full max-w-7xl mx-auto">
+          <Outlet />
+        </div>
       </main>
     </React.Fragment>
   );

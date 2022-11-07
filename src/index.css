@@ -5,7 +5,7 @@
   color: #18181b; /* zinc.900 */
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @media (prefers-color-scheme: dark) {
